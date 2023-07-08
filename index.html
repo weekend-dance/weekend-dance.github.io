@@ -16,11 +16,16 @@
 	<div class="container">
 		
 		<div class="f-group">
-			<label for="">Country</label>
+			<label for="">Date</label>
 			<select name="slct1" id="slct1" onchange="populate(this.id,'slct2')">
-				<option value=""> -- Choose Country -- </option>
-				<option value="india">INDIA</option>
-				<option value="america">AMERICA</option>
+				<option value=""> -- Choose Date -- </option>
+				<option value="July 15, Sat">July 15, Sat</option>
+                <option value="July 22, Sat">July 22, Sat</option> 
+                <option value="July 29, Sat">July 29, Sat</option>
+                <option value="Aug 5, Sat">Aug 5, Sat</option>
+                <option value="Aug 12, Sat">Aug 12, Sat</option>
+                <option value="Aug 19, Sat">Aug 19, Sat</option>
+                <option value="Aug 26, Sat">Aug 26, Sat</option>
 			</select>
 		</div>
 		
@@ -41,13 +46,13 @@
 
 			s2.innerHTML = "";
 
-			if(s1.value == "July 15, Sat")
+			if(s1.value == "July 15, Sat" || "July 22 Sat" || "July 29 Sat") 
 			{
 				var optionArray = ['Hiphop/Choreo Foundation Class (Shan)'];
 			}
-			else if(s1.value  == 'america')
+			else if(s1.value  == 'July 29 Sat' || 'Aug ')
 			{
-				var optionArray = ['new york|New York','los angeles|Los Angeles','chicago|Chicago','houston|Houston'];
+				var optionArray = ['Kpop/Jazz Foundation Class(Emily)'];
 			}
 
 			for(var option in optionArray)
