@@ -2,72 +2,73 @@
 <html>
 
 <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
+    <h1>Weekend Dance Studio Season 2</h1>
+    <p>Welcome to our class booking page &#128197</p>
 </body>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-	<div class="container">
-		
-		<div class="f-group">
-			<label for="">Date</label>
-			<select name="slct1" id="slct1" onchange="populate(this.id,'slct2')">
-				<option value=""> -- Choose Date -- </option>
-				<option value="July 15, Sat">July 15, Sat</option>
-                <option value="July 22, Sat">July 22, Sat</option> 
+    <div class="container">
+
+        <div class="f-group">
+            <label for="">Date</label>
+            <select name="slct1" id="slct1" onchange="populate(this.id,'slct2')">
+                <option value=""> -- Choose Date -- </option>
+                <option value="July 15, Sat">July 15, Sat</option>
+                <option value="July 22, Sat">July 22, Sat</option>
                 <option value="July 29, Sat">July 29, Sat</option>
                 <option value="Aug 5, Sat">Aug 5, Sat</option>
                 <option value="Aug 12, Sat">Aug 12, Sat</option>
                 <option value="Aug 19, Sat">Aug 19, Sat</option>
                 <option value="Aug 26, Sat">Aug 26, Sat</option>
-			</select>
-		</div>
-		
-		<div class="f-group">
-			<label for="">City</label>
-			<select name="slct2" id="slct2"></select>
-		</div>
+            </select>
+        </div>
 
-	</div>
+        <div class="f-group">
+            <label for="">Class</label>
+            <select name="slct2" id="slct2"></select>
+        </div>
+
+    </div>
 
 
-	<script>
-		
-		function populate(s1,s2)
-		{
-			var s1 = document.getElementById(s1);
-			var s2 = document.getElementById(s2);
+    <script>
 
-			s2.innerHTML = "";
+        function populate(s1, s2) {
+            var s1 = document.getElementById(s1);
+            var s2 = document.getElementById(s2);
 
-			if(s1.value == "July 15, Sat" || "July 22 Sat" || "July 29 Sat") 
-			{
-				var optionArray = ['Hiphop/Choreo Foundation Class (Shan)'];
-			}
-			else if(s1.value  == 'July 29 Sat' || 'Aug ')
-			{
-				var optionArray = ['Kpop/Jazz Foundation Class(Emily)'];
-			}
+            s2.innerHTML = "";
 
-			for(var option in optionArray)
-			{
-				var pair = optionArray[option].split("|");
-				var newoption = document.createElement("option");
+            if (s1.value == "July 15, Sat" || "July 22, Sat" || "Aug 16, Sat") {
+                var optionArray = ['Hiphop/Choreo|Hiphop/Choreo Foundation Class (Shan)'];
+            }
+            else if (s1.value == 'July 29 Sat' || 'Aug 5, Sat' || 'Aug 12, Sat') {
+                var optionArray = ['Kpop/Jazz|Kpop/Jazz Foundation Class(Emily)'];
+            } else {
+                alert("No class on this date");
+            }
 
-				newoption.value = pair[0];
-				newoption.innerHTML=pair[1];
-				s2.options.add(newoption);
-			}
+            for (option of optionArray) {
+                var pair = option.split("|");
+                var newoption = document.createElement("option");
 
-		}
+                newoption.value = pair[0];
+                newoption.innerHTML = pair[1];
+                s2.options.add(newoption);
+            }
 
-	</script>
-	
+        }
+
+    </script>
+
 </body>
+
 </html>
