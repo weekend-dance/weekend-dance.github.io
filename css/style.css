@@ -1,0 +1,21 @@
+body {
+    font-family: 'Monument Grotesk Bold', sans-serif;
+}
+
+h1 {
+    font-size: 150px;
+}
+
+p {
+    font-size: 80px;
+}
+
+slogan {
+    font-family: 'Courier New', monospace;
+    font-size: 30px;
+}
+
+contact {
+    font-family: 'Monument Grotesk Bold', sans-serif;
+    font-size: 30px;
+}
