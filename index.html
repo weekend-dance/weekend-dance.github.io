@@ -4,7 +4,7 @@
 <body>
     <h1>Weekend Dance Studio Season 2</h1>
     <p>Welcome to our class booking page &#128197</p>
-    <slogan> 
+    <slogan>
         Get ready to groove, connect, and create lasting memories on the dance floor every weekend.</slogan>
 </body>
 <html lang="en">
@@ -57,10 +57,10 @@
 
             s2.innerHTML = "";
 
-            if (s1.value == "July 15, Sat" || "July 22, Sat" || "Aug 16, Sat") {
+            if (["July 15, Sat", "July 22, Sat", "Aug 16, Sat"].indexOf(s1.value) > -1) {
                 var optionArray = ['Hiphop/Choreo|Hiphop/Choreo Foundation Class (Shan)'];
             }
-            else if (s1.value == 'July 29 Sat' || 'Aug 5, Sat' || 'Aug 12, Sat') {
+            else if (['July 29 Sat', 'Aug 5, Sat', 'Aug 12, Sat'].indexOf(s1.value) > -1) {
                 var optionArray = ['Kpop/Jazz|Kpop/Jazz Foundation Class(Emily)'];
             } else {
                 alert("No class on this date");
@@ -81,8 +81,9 @@
 
 </body>
 <br>
-<slogan >Contact Information
+<slogan>Contact Information
     <br>Wechat/微信客服号: weekendance888
     <br>Email: weekendance888@gmail.com
 </slogan>
+
 </html>
