@@ -1,3 +1,5 @@
+import { addRow } from './sheets.js';
+
 function doSheetsTest() {
-    alert("hi");
+    addRow();
 }
